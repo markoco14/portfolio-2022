@@ -13,7 +13,7 @@
 <body>
     <header class="navbar fixed flex">
         <div>
-            Markodevo
+            MarkoDevo
         </div>
         <nav>
             <ul class="nav-list flex">
@@ -39,9 +39,9 @@
         </nav>
     </header>
     <main>
-        <section class="grid grid-stack">
+        <section class="grid hero-grid">
             <div class="flex hero-content">
-                <h1 class="hero-phrase">I build things that <br> people love using</h1>
+                <h1 class="hero-phrase">I build things that <br class="hero-break"> people love using</h1>
                 <h2 class="hero-name">Mark O'Connor</h2>
                 <p class="hero-job-title">Full-stack Developer</p>
                 <p>Taipei, Taiwan</p>
@@ -50,7 +50,8 @@
                     <a href="#" class="hero-projects-button">See Projects</a>
                 </div>
             </div>
-            <img src="{{URL::asset("/images/screen_glow_1.png")}}" alt="Swirls of neon light glow from a screen in the night.">
+            <img class="hero-image" src="{{URL::asset("/images/screen_glow_1.png")}}" alt="Swirls of neon light glow from a screen in the night.">
+            <img class="hero-image-mobile" src="{{URL::asset("/images/screen_glow_mobile.png")}}" alt="Swirls of neon light glow from a screen in the night.">
         </section>
         <section>
             Current project goes here
