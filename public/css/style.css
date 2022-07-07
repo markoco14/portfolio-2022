@@ -252,7 +252,27 @@ select {
 .hero-image-mobile {
     display: block;
     width:100%;
-    object-fit:cover;    
+    object-fit:cover;
+    /* height:100vh;     */
+}
+
+@media (hover: none) and (max-width: 600px) {
+    .hero-image-mobile {
+        height:100vh;
+    }
+}
+
+@media (hover: none) and (max-width: 325px) {
+    .hero-action-buttons {
+        display:flex;
+        flex-wrap: wrap;
+        gap:1rem;
+    } 
+
+    .hero-button {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 600px) {
