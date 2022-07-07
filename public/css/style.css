@@ -115,6 +115,10 @@ select {
 
 /* Nav section styles begin here */
 
+.mobile-logo {
+    display: none;
+}
+
 .navbar {
     color: white;
     justify-content: space-between;
@@ -142,6 +146,35 @@ select {
     color: white;
 }
 
+@media (hover:none) and (max-width: 600px) {
+    .mobile-logo {
+        background-color: rgba(15, 15, 15, 0.5);
+        color: white;
+        padding: 1rem;
+        width:100%;
+        display: block;
+        position:fixed;
+
+    }
+
+    .large-screen-logo {
+        display: none;
+    }
+
+    .navbar {
+        position: fixed;
+        inset: auto auto 0 auto;
+    }
+
+    .navbar > nav {
+        width: 100%;
+    }
+    .nav-list {
+        width: 100%;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+}
 
 
 /* Hero section styles begin here */

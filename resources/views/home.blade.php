@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="{{URL::asset("/css/style.css")}}">
 </head>
 <body>
+    <div class="mobile-logo">
+        Markodevo
+    </div>
     <header class="navbar fixed flex">
-        <div>
-            MarkoDevo
+        <div class="large-screen-logo">
+            Markodevo
         </div>
         <nav>
             <ul class="nav-list flex">
