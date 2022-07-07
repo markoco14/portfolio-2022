@@ -39,19 +39,22 @@
         </nav>
     </header>
     <main>
-        <section class="grid hero-grid">
-            <div class="flex hero-content">
-                <h1 class="hero-phrase">I build things that <br class="hero-break"> people love using</h1>
-                <h2 class="hero-name">Mark O'Connor</h2>
-                <p class="hero-job-title">Full-stack Developer</p>
-                <p>Taipei, Taiwan</p>
+        <section class="grid grid-stack hero-grid">
+            <div class="flex flex-column hero-content">
+                <h1 class="hero-phrase">
+                    I build things
+                    people love using
+                </h1>
+                <p class="hero-name">Mark O'Connor</p>
+                <p class="hero-job-title">Full-Stack Developer</p>
+                <p class="hero-city">Taipei, Taiwan</p>
                 <div class="hero-action-buttons">
-                    <a href="#" class="hero-contact-button">Contact Me</a>
-                    <a href="#" class="hero-projects-button">See Projects</a>
+                    <a href="#" class="hero-button button-orange">Contact Me</a>
+                    <a href="#" class="hero-button button-blue">See Projects</a>
                 </div>
             </div>
             <img class="hero-image" src="{{URL::asset("/images/screen_glow_1.png")}}" alt="Swirls of neon light glow from a screen in the night.">
-            <img class="hero-image-mobile" src="{{URL::asset("/images/screen_glow_mobile.png")}}" alt="Swirls of neon light glow from a screen in the night.">
+            <img class="hero-image-mobile" src="{{URL::asset("/images/screen_glow_mobile_2.png")}}" alt="Swirls of neon light glow from a screen in the night.">
         </section>
         <section>
             Current project goes here

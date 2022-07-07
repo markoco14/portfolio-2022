@@ -94,8 +94,18 @@ select {
     display:grid;
 }
 
+.grid-stack > * {
+    place-content: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
 .flex {
     display:flex;
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 .fixed {
@@ -137,110 +147,117 @@ select {
 /* Hero section styles begin here */
 
 .hero-grid > * {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
     color: white;
-    place-items:center;
 }
 
 .hero-grid > img {
     z-index: -1;
 }
 
-.hero-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media screen and (min-width: 700px) {
+    .hero-image {
+        width:100%;
+    }
 }
 
+.hero-content {
+    padding:1rem;
+    align-items: start;
+    width: min(400px, 90%);
+    margin: auto;
+}
+
+
 .hero-phrase {
-    display: block;
-    font-size: 3rem;
+    display: inline;
+    padding:0;
+    text-align: left;
+    font-size: clamp(2rem, 5vw, 5rem);
     font-weight: 800;
-    text-align:justify;
-    text-justify:distribute-all-lines;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hero-name {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
     color: var(--clr-blue);
     font-weight: 600;
     margin-bottom: 0.7rem;
 }
 
 .hero-job-title {
-    font-size:1.2rem;
+    font-size:clamp(1rem, 2vw, 2rem);
     font-weight: 500;
 }
 
+.hero-city {
+    font-size: clamp(0.875rem, 1.5vw, 1.5rem);
+}
 .hero-action-buttons {
     margin-top: 1rem;
 }
 
-.hero-contact-button {
+.hero-button {
     border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius:2px;
+    font-size: 1rem;    
+}
+
+.button-orange {
     background: var(--clr-orange);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius:2px;
 }
 
-.hero-projects-button {
-    border: none;
+.button-blue {
     background: var(--clr-blue);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius:2px;
 }
 
-.hero-image-mobile {
+.hero-image {
     display: none;
 }
 
-@media screen and (max-width: 500px) {
+.hero-image-mobile {
+    display: block;
+    width:100%;
+    object-fit:cover;    
+}
 
-    .hero-grid {
-        max-height: 100vh;
-    }
-    .hero-grid > img {
-        z-index: -1;
-    }
-
-    .hero-content h1 {
-        font-size:2rem;
-    }
-
-    .hero-name {
-        font-size: 1.75rem;
-        color: white;
-        /* color: var(--clr-blue); */
-        /* color: rgb(5, 63, 237); */
-        font-weight: 600;
-        margin-bottom: 0.7rem;
-    }
-
-    .hero-image {
-        display: none;
+@media screen and (min-width: 600px) {
+    .hero-content {
+        width: min(450px, 90%);
+        padding: 0 0 0 5rem;
+        align-items: start;
+        margin: 0;
     }
 
     .hero-phrase {
-        padding:0 1rem;
-        text-align:center;
-        text-justify:none;
-
+        text-align:left;
     }
 
-    /* .hero-break {
-        display:none;
-    } */
+    .hero-image {
+        display: block;
+    }
 
     .hero-image-mobile {
-        display: block;
-        /* object-fit:fill; */
-        width:100%;
-        object-fit:cover;    
-        max-height: 100vh; 
-        /* min-width:100%; */
+        display: none;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .hero-content {
+        width: min(500px, 90%)
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hero-content {
+        width: min(700px, 90%);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .hero-content {
+        margin: auto;
+        padding: 0;
     }
 }
