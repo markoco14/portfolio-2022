@@ -108,8 +108,40 @@
         <section id="contact" style="min-height: 500px;">
             <article class="container">
                 <h2>Contact Me</h2>
-                <p>Explanation goes here</p>
-                <p>Build a form</p>
+                
+                <div class="form-container">
+                    <p>Build a form</p>
+                    @if(Session::has('success'))
+                    <p>{{ Session::get('success') }}</p>
+                    @endif
+                    <form action="contact-me" method="POST" class="contact-form">
+                        @csrf
+                        <div class="flex control-group">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text">
+                            @error('name')
+                            <p class="error">{{$message}}</p>
+                            @enderror
+                        </div>
+                        <div class="flex control-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="text">
+                            @error('email')
+                            <p class="error">{{$message}}</p>
+                            @enderror
+                        </div>
+                        <div class="flex control-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                            @error('message')
+                            <p class="error">{{$message}}</p>
+                            @enderror
+                        </div>
+                        <div class="flex control-group">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
             </article>
         </section>
     </main>
