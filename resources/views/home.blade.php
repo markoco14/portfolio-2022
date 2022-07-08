@@ -106,7 +106,11 @@
             </article>
         </section>
         <section id="contact" style="min-height: 500px;">
-            Contact Section goes here
+            <article class="container">
+                <h2>Contact Me</h2>
+                <p>Explanation goes here</p>
+                <p>Build a form</p>
+            </article>
         </section>
     </main>
     <footer>

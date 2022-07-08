@@ -86,6 +86,23 @@ svg {
 
 /* Utility classes */
 
+.bg-dark {
+    background-color: var(--bg-dark);
+}
+
+.container {
+    position:relative;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        width:90%;
+        max-width:1000px;
+        margin: auto;
+        position: relative;
+    }
+}
+
 .grid {
     display:grid;
 }
@@ -174,7 +191,6 @@ svg {
         flex-grow: 1;
     }
 }
-
 
 /* Hero section styles begin here */
 
@@ -342,18 +358,9 @@ svg {
 
 /* About section styles */
 
-.bg-dark {
-    background-color: var(--bg-dark);
-}
-
-.relative {
-    position: relative;
-}
-
 .about-container {
-    position:relative;
-    flex-wrap: wrap;
-    color: white;
+    color:white;
+    flex-wrap:wrap;
 }
 
 .about-heading {
@@ -426,11 +433,8 @@ svg {
 }
 
 @media screen and (min-width: 500px) {
-    .container {
-        width:90%;
-        max-width:1000px;
-        margin: auto;
-        position: relative;
+    .about-container {
+        /* nothing yet */
     }
 
     .about-heading {
