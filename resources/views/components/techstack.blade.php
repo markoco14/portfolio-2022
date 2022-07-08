@@ -1,4 +1,4 @@
-<div class="tech-stack-container">
+<div class="stat-answer">
     <i class="devicon-mysql-plain"></i>
     <i class="devicon-mysql-plain-wordmark"></i>          
     <i class="devicon-nextjs-original"></i>

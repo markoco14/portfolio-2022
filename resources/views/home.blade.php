@@ -55,70 +55,57 @@
                 <p class="hero-name">Mark O'Connor</p>
                 <p class="hero-job-title">Full-Stack Developer</p>
                 <p class="hero-city">Taipei, Taiwan</p>
-                <div class="hero-action-buttons">
-                    <a href="#about" class="hero-button button-orange">
+                <div class="action-button-container">
+                    <a 
+                        href="#about" 
+                        class="button button-orange"
+                    >
                         About Me</a>
-                    <a href="#" class="hero-button button-blue">
+                    <a 
+                        href="#" 
+                        class="button button-blue"
+                    >
                         My Projects</a>
                 </div>
             </div>
-            <img class="hero-image" src="{{URL::asset("/images/screen_glow_1.png")}}" alt="Swirls of neon light glow from a screen in the night.">
-            <img class="hero-image-mobile" src="{{URL::asset("/images/screen_glow_mobile_2.png")}}" alt="Swirls of neon light glow from a screen in the night.">
+            <img 
+                src="{{URL::asset("/images/screen_glow_1.png")}}" 
+                alt="Swirls of neon light glow from a screen in the night."
+                class="hero-image" 
+            >
+            <img 
+                src="{{URL::asset("/images/screen_glow_mobile_2.png")}}" 
+                alt="Swirls of neon light glow from a screen in the night."
+                class="hero-image-mobile" 
+            >
         </section>
-        <section>
+        <section style="min-height: 500px;">
             Current project goes here
         </section>
-        <section id="about" class="grid about-grid-stack about-section">
-            {{-- <div class="flex about-container"> --}}
-                <article class="flex about-container">
-                    <h2 class="about-heading">About <span>Mark</span></h2>
-                    {{-- <div class="flex about-overview"> --}}
-                    <div class="about-pic-container">
-                        <img 
-                            class="about-picture"
-                            src="{{URL::asset("/images/profilePicColor.jpg")}}" 
-                            alt="A picture of Mark smiling with a twinkle in his eye"
-                        >
-                        <a href="#contact" class="about-contact hero-button button-orange">Contact Me</a>
+        <section id="about" class="bg-dark">
+            <article class="flex container about-container">
+                <h2 class="about-heading">About <span>Mark</span></h2>
+                <div class="about-image-container">
+                    <img 
+                        class="about-picture"
+                        src="{{URL::asset("/images/profilePicColor.jpg")}}" 
+                        alt="A picture of Mark smiling with a twinkle in his eye"
+                    >
+                    <div class="flex action-button-container about-action-mobile">
+                        <a href="#contact" class="button button-orange">Contact Me</a>
+                        <a href="#about" class="button button-blue">Learn More</a>
                     </div>
-                    <article class="about-description">
-                        <p class="stat-heading">Status</p>
-                        <div class="tech-stack-container">
-                            <p>Ready to work</p>
-                        </div>
-                        <p class="stat-heading">What I Do</p>
-                        <div class="tech-stack-container">
-                            <p>Front-End, Back-End, UX</p>
-                        </div>
-                        <p class="stat-heading">Experience</p>
-                        <div class="tech-stack-container">
-                            @php
-                                $today = \Carbon\Carbon::today('Asia/Taipei');
-                            @endphp 
-                            <p>{{$today->diffInDays('2020-12-13')}} days</p>
-                            
-                        </div>
-                        <p class="stat-heading">Interested In</p>
-                        <div class="tech-stack-container">
-                            <p>
-                                Remote Office Both
-                            </p>
-                        </div>
-                        <p class="stat-heading">Tech Stack</p>
-                        <x-techstack></x-techstack>
-                    </article>
-                    {{-- </div> --}}
-                   <x-longbio></x-longbio>
+                </div>
+                <article class="flex about-description-container">
+                    <x-aboutstats></x-aboutstats>
+                    <div class="flex action-button-container about-action-large ">
+                        <a href="#contact" class="button button-orange">Contact Me</a>
+                        <a href="#about" class="button button-blue">Learn More</a>
+                    </div>
                 </article>
-                {{-- <article>
-                    <h2>Contact Me</h2>
-                    <p>Contact(?) goes here.</p>
-
-                    
-                </article> --}}
-            {{-- </div> --}}
+            </article>
         </section>
-        <section id="contact">
+        <section id="contact" style="min-height: 500px;">
             Contact Section goes here
         </section>
     </main>
