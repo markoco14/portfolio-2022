@@ -82,9 +82,9 @@
         <section style="min-height: 500px;">
             Current project goes here
         </section>
-        <section id="about" class="bg-dark">
+        <section id="about" class="bg-dark relative" style="padding: 5rem 0;">
             <article class="flex container about-container">
-                <h2 class="about-heading">About <span>Mark</span></h2>
+                <h2 class="heading about-heading">About <span>Mark</span></h2>
                 <div class="about-image-container">
                     <img 
                         class="about-picture"
@@ -105,8 +105,62 @@
                 </article>
             </article>
         </section>
-        <section id="contact" style="min-height: 500px;">
-            Contact Section goes here
+        <section id="contact" class="section">
+            <article class="flex container contact-container">
+                <h2 class="heading contact-heading">
+                    <span>Contact</span> Me
+                </h2>
+                @if(Session::has('success'))
+                <p>{{ Session::get('success') }}</p>
+                @endif
+                <div class="contact-content-container">
+
+                    <p class="form-description">
+                        I'm open to new opportunities. 
+                        I welcome both full-time and part-time work
+                        and I'm happy working in-office or remotely.
+                        If you feel that I can help you with your goals,
+                        or you would like to learn more,
+                        please feel free to send me a message.
+                        Thank you, I will get back to you as soon as possible.
+                    </p>
+                    <form 
+                        action="contact-me" 
+                        method="POST"
+                    >    
+                        @csrf
+                        <div class="flex control-group">
+                            <label class="text-highlight" for="name">Name</label>
+                            <input id="name" name="name" type="text">
+                            @error('name')
+                            <p class="error">{{$message}}</p>
+                            @enderror
+                        </div>
+                        <div class="flex control-group">
+                            <label class="text-highlight" for="email">Email</label>
+                            <input id="email" name="email" type="text">
+                            @error('email')
+                            <p class="error">{{$message}}</p>
+                            @enderror
+                        </div>
+                        <div class="flex control-group">
+                            <label class="text-highlight" for="message">Message</label>
+                            <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                            @error('message')
+                            <p class="error">{{$message}}</p>
+                            @enderror
+                        </div>
+                        <div class="flex control-group">
+                            <button 
+                                type="submit"
+                                class="button button-blue"
+                            >
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </article>
         </section>
     </main>
     <footer>

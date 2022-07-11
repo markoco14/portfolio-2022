@@ -3,7 +3,7 @@
     --clr-blue: rgb(5, 134, 237);
 
     --clr-blue-light: rgb(54, 154, 235);
-    --bg-dark: rgba(15, 15, 15);
+    --bg-dark: rgba(0,0,0);
     --bg-dark-50: rgba(15, 15, 15, 0.5);
     --ff-primary: "Inter", sans-serif;
 }
@@ -22,6 +22,13 @@
   font: inherit;
   font-family: var(--ff-primary);
   /* font-size: 18px; */
+}
+
+
+@media screen and (min-width: 1000px) {
+    * {
+        font-size: 18px;
+    }
 }
 
 html,
@@ -60,6 +67,10 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+span {
+    font: inherit;
+}
+
 /* Make images easier to work with */
 img,
 picture,
@@ -86,12 +97,55 @@ svg {
 
 /* Utility classes */
 
+.heading > span {
+    color: var(--clr-blue);
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        text-align: center;
+        width:100%;
+    }
+}
+
+.section {
+    min-height: 500px;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.relative {
+    position: relative;
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+}
+
+.container {
+    position:relative;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        width:90%;
+        max-width:1000px;
+        margin: auto;
+        position: relative;
+    }
+}
+
 .grid {
     display:grid;
 }
 
 .grid-stack > * {
     place-content: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.grid-stack-left > * {
+    /* place-content: center; */
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
@@ -107,6 +161,11 @@ svg {
 .fixed {
     position: fixed;
 }
+
+.error {
+    color: red;
+}
+
 
 
 /* Nav section styles begin here */
@@ -175,7 +234,6 @@ svg {
     }
 }
 
-
 /* Hero section styles begin here */
 
 .hero-grid > * {
@@ -225,19 +283,6 @@ svg {
     font-size: clamp(0.875rem, 1.5vw, 1.5rem);
     margin-bottom:1rem;
 }
-.action-button-container {
-    /* margin-top: 1rem; */
-}
-
-/* .hero-button {
-    border: none;
-    color: white;
-    text-align: center;
-    flex-grow: 1;
-    padding: 0.5rem 1rem;
-    border-radius:2px;
-    font-size: 1rem;    
-} */
 
 .button {
     border: none;
@@ -275,17 +320,6 @@ svg {
 }
 
 @media screen and (max-width: 325px) {
-    /* .hero-action-buttons {
-        display:flex;
-        flex-wrap: wrap;
-        gap:0.5rem;
-    } 
-
-    .hero-button {
-        width: 100%;
-        flex-grow: 1;
-        text-align: center;
-    } */
 
     .action-button-container {
         display:flex;
@@ -294,7 +328,6 @@ svg {
     } 
 
     .button {
-        /* width: 100%; */
         flex-grow: 1;
         text-align: center;
     }
@@ -342,45 +375,17 @@ svg {
 
 /* About section styles */
 
-.bg-dark {
-    background-color: var(--bg-dark);
-}
-
-.relative {
-    position: relative;
-}
-
 .about-container {
-    position:relative;
-    flex-wrap: wrap;
-    color: white;
+    color:white;
+    flex-wrap:wrap;
 }
 
 .about-heading {
     color: white;
-    position: absolute;
-    inset: 2rem auto auto 0.5rem;
+    position: relative;
     font-size: clamp(1.5rem, 8vh, 4rem);
     font-weight: 700;
     z-index: 10;
-}
-
-/* to fix text covering face on very narrow MOBILE screen sizes */
-@media (hover:none) and (max-width:275px) {
-    .about-heading {
-        position: relative;
-    }
-}
-
-/* to fix text covering face on very narrow DESKTOP screen sizes */
-@media screen and (max-width:340px) {
-    .about-heading {
-        position: relative;
-    }
-}
-
-.about-heading > span {
-    color: var(--clr-blue);
 }
 
 .about-image-container {
@@ -390,6 +395,7 @@ svg {
 .about-picture {
     min-height: 100%;
     object-fit: cover;
+    border-radius:5%;
 }
 
 .about-action-mobile {
@@ -426,15 +432,8 @@ svg {
 }
 
 @media screen and (min-width: 500px) {
-    .container {
-        width:90%;
-        max-width:1000px;
-        margin: auto;
-        position: relative;
-    }
-
     .about-heading {
-        inset: 2rem auto auto -1.75rem;
+        padding-left: 0;
         font-size: clamp(2.25rem, 8vw, 6rem);
     }
 
@@ -456,7 +455,74 @@ svg {
         flex-grow: 1;
         max-width: 150px;
     }
+
     .about-description-container {
         max-width: 50%;
+    }
+}
+
+/***
+***
+Contact section styles 
+***
+***/
+
+.contact-container {
+    flex-direction: column;
+}
+
+.contact-content-container {
+    padding: 1rem;
+}
+
+.contact-heading {
+    position: relative;
+    font-size: clamp(1.5rem, 8vh, 4rem);
+    font-weight: 700;
+    z-index: 10;
+}
+
+.contact-content-container {
+    padding-top: clamp(1rem, 2vw, 2rem);
+}
+
+.form-description {
+    margin-bottom: 1rem;
+}
+
+.control-group {
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.control-group > label {
+    font-weight:600;
+    color: black;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.control-group > input, textarea {
+    padding: 0.5rem 0.5rem;
+}
+
+@media screen and (min-width: 500px) {
+    .contact-content-container {
+        padding: 1rem 0;
+        margin: auto;
+    }
+
+    .contact-heading {
+        font-size: clamp(2.25rem, 8vw, 6rem);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .contact-container {
+        display:flex;
+    }
+
+    .contact-content-container {
+        max-width: 75%;
+        padding-right:1rem;
     }
 }
