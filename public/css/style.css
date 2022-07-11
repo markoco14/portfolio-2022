@@ -49,6 +49,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+    min-width: 100vw;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -124,8 +125,15 @@ svg {
 
 .container {
     position:relative;
+    width:100%;
 }
 
+@media screen and (max-width: 320px) {
+    .main > * {
+        width: 100vw;
+    }
+
+}
 @media screen and (min-width: 500px) {
     .container {
         width:90%;
@@ -395,6 +403,13 @@ svg {
     margin-bottom:0.5rem;
 }
 
+.project-heading {
+    position: relative;
+    font-size: clamp(1.5rem, 8vh, 4rem);
+    font-weight: 700;
+    z-index: 10;
+}
+
 .project-image-buttons-container {
     align-items:end;
     padding: 0 0.5rem 1rem;
@@ -408,6 +423,7 @@ svg {
     min-height: 400px;
     max-height: 600px;
 }
+
 
 @media screen and (min-width: 500px) {
     .project-image-buttons-container > * {
