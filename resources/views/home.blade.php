@@ -79,8 +79,8 @@
                 class="hero-image-mobile" 
             >
         </section>
-        <section style="min-height: 500px;">
-            Current project goes here
+        <section class="section">
+            <x-projects_carousel></x-projects_carousel>
         </section>
         <section id="about" class="bg-dark relative" style="padding: 5rem 0;">
             <article class="flex container about-container">
@@ -114,7 +114,6 @@
                 <p>{{ Session::get('success') }}</p>
                 @endif
                 <div class="contact-content-container">
-
                     <p class="form-description">
                         I'm open to new opportunities. 
                         I welcome both full-time and part-time work
