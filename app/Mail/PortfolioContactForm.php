@@ -33,6 +33,6 @@ class PortfolioContactForm extends Mailable
     {
         $today = Carbon::today('Asia/Taipei')->toDateString();
         return $this->subject($today . ': Email from ' . ENV('MAIL_FROM_NAME'))
-                ->view('contact_email');
+                ->view('components/contact_email');
     }
 }
