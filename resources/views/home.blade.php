@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     {{-- project styles --}}
     <link rel="stylesheet" href="{{URL::asset("/css/style.css")}}">
+    {{-- slick css --}}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
     <div class="mobile-logo">
@@ -79,8 +82,8 @@
                 class="hero-image-mobile" 
             >
         </section>
-        <section style="min-height: 500px;">
-            Current project goes here
+        <section class="section">
+            <x-projects_carousel></x-projects_carousel>
         </section>
         <section id="about" class="bg-dark relative" style="padding: 5rem 0;">
             <article class="flex container about-container">
@@ -114,7 +117,6 @@
                 <p>{{ Session::get('success') }}</p>
                 @endif
                 <div class="contact-content-container">
-
                     <p class="form-description">
                         I'm open to new opportunities. 
                         I welcome both full-time and part-time work
@@ -167,5 +169,24 @@
         <p>Contact me</p>
         <p>Site map</p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script async type="text/javascript">
+        $(document).ready(function(){
+                $('.carousel-container').slick({
+                    dots: true,
+                    arrows: false,
+                    mobileFirst: true,
+                    responsive: [
+                        {
+                            breakpoint: 500,
+                            settings: {
+                                arrows: false,
+                            }
+                        }
+                    ]
+                });
+            });
+    </script>
 </body>
 </html>

@@ -49,6 +49,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+    min-width: 100vw;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -124,8 +125,15 @@ svg {
 
 .container {
     position:relative;
+    width:100%;
 }
 
+@media screen and (max-width: 320px) {
+    .main > * {
+        width: 100vw;
+    }
+
+}
 @media screen and (min-width: 500px) {
     .container {
         width:90%;
@@ -141,6 +149,13 @@ svg {
 
 .grid-stack > * {
     place-content: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.grid-stack-bottom > * {
+    /* place-content:end center; */
+    align-content:end;
+    justify-content: center;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
@@ -166,7 +181,9 @@ svg {
     color: red;
 }
 
-
+.image-rounded {
+    border-radius:5%;
+}
 
 /* Nav section styles begin here */
 
@@ -371,6 +388,62 @@ svg {
         margin: auto;
         padding: 0;
     }
+}
+
+
+/* Project section styles */
+
+.project-content-container {
+    padding: 1rem 1rem 1rem;
+}
+
+.project-title-links-container {
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project-content-heading {
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-bottom:0.5rem;
+    color: white;
+    background-color: var(--bg-dark-50);
+    border-radius: 10px 10px 0 0 / 10px 10px 0 0;
+
+}
+
+.project-heading {
+    position: relative;
+    font-size: clamp(1.5rem, 8vh, 4rem);
+    font-weight: 700;
+    z-index: 10;
+}
+
+.project-image-buttons-container {
+    justify-content: center;
+    padding: 0 0.5rem 1rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-image {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 400px;
+    max-height: 600px;
+    z-index: -1;
+}
+
+
+@media screen and (min-width: 500px) {
+    .project-image-buttons-container > * {
+        flex-basis: min(160px, 35%);
+        flex-grow:0;
+    }
+
+    .project-image {
+        border-radius: 10px / 10px;
+    }    
 }
 
 /* About section styles */
