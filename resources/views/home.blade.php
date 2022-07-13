@@ -28,7 +28,7 @@
         <nav>
             <ul class="nav-list flex" role="list">
                 <li>
-                    <a href="#home">
+                    <a href="#">
                         Home
                     </a>
                 </li>
@@ -38,7 +38,7 @@
                     </a>
                     </li>
                 <li>
-                    <a href="#">
+                    <a href="#projects">
                         Projects
                     </a>
                     </li>
