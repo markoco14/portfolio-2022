@@ -50,26 +50,28 @@
     </header>
     <main>
         <section id="home" class="grid grid-stack hero-grid">
-            <div class="flex flex-column hero-content">
-                <h1 class="hero-phrase">
-                    I build things
-                    people love using
-                </h1>
-                <p class="hero-name">Mark O'Connor</p>
-                <p class="hero-job-title">Full-Stack Developer</p>
-                <p class="hero-city">Taipei, Taiwan</p>
-                <div class="action-button-container">
-                    <a 
-                        href="#about" 
-                        class="button button-orange"
-                    >
-                        About Me</a>
-                    <a 
-                        href="#" 
-                        class="button button-blue"
-                    >
-                        My Projects</a>
-                </div>
+            <div class="container flex flex-column">
+                <article class="hero-content">
+                    <h1 class="hero-phrase">
+                        I build things
+                        people love using
+                    </h1>
+                    <p class="hero-name">Mark O'Connor</p>
+                    <p class="hero-job-title">Full-Stack Developer</p>
+                    <p class="hero-city">Taipei, Taiwan</p>
+                    <div class="action-button-container">
+                        <a 
+                            href="#about" 
+                            class="button button-orange"
+                        >
+                            About Me</a>
+                        <a 
+                            href="#" 
+                            class="button button-blue"
+                        >
+                            My Projects</a>
+                    </div>
+                </article>
             </div>
             <img 
                 src="{{URL::asset("/images/screen_glow_1.png")}}" 
@@ -166,7 +168,6 @@
         </section>
     </main>
     <footer>
-        <p>Contact me</p>
         <p>Site map</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
