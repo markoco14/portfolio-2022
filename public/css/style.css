@@ -100,23 +100,12 @@ svg {
 }
 
 /* Utility classes */
-
-.heading > span {
-    color: var(--clr-blue);
-}
-
-@media screen and (max-width: 500px) {
-    .heading {
-        text-align: center;
-        width:100%;
+/* @media (hover:none) and (max-width: 300px) {
+    .main > * {
+        width: 100vw;
     }
-}
 
-.section {
-    min-height: 500px;
-    padding: 5rem 0;
-    position: relative;
-}
+} */
 
 .relative {
     position: relative;
@@ -127,27 +116,6 @@ svg {
 }
 .bg-dark-light {
     background-color: var(--bg-dark-light);
-}
-
-.container {
-    position:relative;
-    width:100%;
-}
-
-@media screen and (max-width: 320px) {
-    .main > * {
-        width: 100vw;
-    }
-
-}
-
-@media screen and (min-width: 500px) {
-    .container {
-        width:90%;
-        max-width:1000px;
-        margin: auto;
-        position: relative;
-    }
 }
 
 .fixed {
@@ -192,7 +160,58 @@ svg {
     border-radius:5%;
 }
 
-/* Nav section styles begin here */
+
+/* SECTION & SECTION HEADING STYLES */
+
+.section {
+    min-height: 500px;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.container {
+    position:relative;
+    width:100%;
+}
+
+.heading > span {
+    color: var(--clr-blue);
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        padding-left: 1rem;
+        text-align: left;
+        width:100%;
+    }
+}
+
+.project-heading,
+.about-heading,
+.contact-heading {
+    position: relative;
+    font-size: clamp(1.5rem, 8vh, 4rem);
+    font-weight: 700;
+    z-index: 10;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        width:90%;
+        max-width:1000px;
+        margin: auto;
+        position: relative;
+    }
+
+    .project-heading,
+    .about-heading,
+    .contact-heading {
+        padding-left: 0;        
+        font-size: clamp(2.25rem, 8vw, 6rem);
+    }
+}
+
+/* HEADER AND NAV STYLES*/
 
 .mobile-logo {  
     display: none;
@@ -259,7 +278,7 @@ svg {
     }
 }
 
-/* Hero section styles begin here */
+/* HERO SECTION STYLES */
 
 .hero-grid > * {
     color: white;
@@ -410,7 +429,7 @@ svg {
 }
 
 
-/* Project section styles */
+/* PROJECT SECTION STYLES */
 
 
 .project-title-links-container {
@@ -426,13 +445,6 @@ svg {
     background-color: var(--bg-dark-50);
     border-radius: 10px 10px 0 0 / 10px 10px 0 0;
 
-}
-
-.project-heading {
-    position: relative;
-    font-size: clamp(1.5rem, 8vh, 4rem);
-    font-weight: 700;
-    z-index: 10;
 }
 
 .project-image-buttons-container {
@@ -462,19 +474,11 @@ svg {
     }    
 }
 
-/* About section styles */
+/* ABOUT SECTION STYLES */
 
 .about-container {
     color:white;
     flex-wrap:wrap;
-}
-
-.about-heading {
-    color: white;
-    position: relative;
-    font-size: clamp(1.5rem, 8vh, 4rem);
-    font-weight: 700;
-    z-index: 10;
 }
 
 .about-image-container {
@@ -520,11 +524,6 @@ svg {
 }
 
 @media screen and (min-width: 500px) {
-    .about-heading {
-        padding-left: 0;
-        font-size: clamp(2.25rem, 8vw, 6rem);
-    }
-
     .about-image-container {
         max-width: 50%;
     }
@@ -555,7 +554,7 @@ svg {
 
 /***
 ***
-Contact section styles 
+CONTACT SECTION STYLES
 ***
 ***/
 
@@ -567,12 +566,7 @@ Contact section styles
     padding: 1rem;
 }
 
-.contact-heading {
-    position: relative;
-    font-size: clamp(1.5rem, 8vh, 4rem);
-    font-weight: 700;
-    z-index: 10;
-}
+
 
 .contact-content-container {
     padding-top: clamp(1rem, 2vw, 2rem);
@@ -603,9 +597,7 @@ Contact section styles
         margin: auto;
     }
 
-    .contact-heading {
-        font-size: clamp(2.25rem, 8vw, 6rem);
-    }
+    
 }
 
 @media screen and (min-width: 1000px) {
