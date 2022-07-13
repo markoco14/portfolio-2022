@@ -18,10 +18,10 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
-    <div class="mobile-logo">
-        Markodevo
-    </div>
     <header class="navbar fixed flex">
+        <div class="mobile-logo">
+            Markodevo
+        </div>
         <div class="large-screen-logo">
             Markodevo
         </div>

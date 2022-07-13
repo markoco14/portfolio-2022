@@ -34,7 +34,6 @@
 html,
 body {
     height:100%;
-    overflow-x: hidden;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -54,6 +53,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -144,6 +144,10 @@ svg {
     }
 }
 
+.fixed {
+    position: fixed;
+}
+
 .grid {
     display:grid;
 }
@@ -172,10 +176,6 @@ svg {
 
 .flex-column {
     flex-direction: column;
-}
-
-.fixed {
-    position: fixed;
 }
 
 .error {
@@ -230,6 +230,7 @@ svg {
         width:100%;
         display: block;
         position:fixed;
+        inset: 0 auto auto 0;
 
     }
 
@@ -405,9 +406,6 @@ svg {
 
 /* Project section styles */
 
-.project-content-container {
-    padding: 1rem 1rem 1rem;
-}
 
 .project-title-links-container {
     flex-direction: column;
@@ -480,7 +478,6 @@ svg {
 .about-picture {
     min-height: 100%;
     object-fit: cover;
-    border-radius:5%;
 }
 
 .about-action-mobile {
@@ -524,6 +521,10 @@ svg {
 
     .about-image-container {
         max-width: 50%;
+    }
+
+    .about-picture {
+        border-radius:15px 15px 15px 15px / 15px 15px 15px 15px;
     }
 
     .about-action-mobile {
