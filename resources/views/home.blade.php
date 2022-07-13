@@ -26,7 +26,7 @@
             Markodevo
         </div>
         <nav>
-            <ul class="nav-list flex">
+            <ul class="nav-list flex" role="list">
                 <li>
                     <a href="#home">
                         Home
@@ -84,7 +84,7 @@
                 class="hero-image-mobile" 
             >
         </section>
-        <section class="section">
+        <section id="projects" class="section">
             <x-projects_carousel></x-projects_carousel>
         </section>
         <section id="about" class="bg-dark relative" style="padding: 5rem 0;">
@@ -166,28 +166,4 @@
                 </div>
             </article>
         </section>
-    </main>
-    <footer>
-        <p>Site map</p>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script async type="text/javascript">
-        $(document).ready(function(){
-                $('.carousel-container').slick({
-                    dots: true,
-                    arrows: false,
-                    mobileFirst: true,
-                    responsive: [
-                        {
-                            breakpoint: 500,
-                            settings: {
-                                arrows: false,
-                            }
-                        }
-                    ]
-                });
-            });
-    </script>
-</body>
-</html>
+    <x-footer></x-footer>

@@ -4,6 +4,7 @@
 
     --clr-blue-light: rgb(54, 154, 235);
     --bg-dark: rgba(0,0,0);
+    --bg-dark-light: rgba(15,15,15);
     --bg-dark-50: rgba(15, 15, 15, 0.5);
     --ff-primary: "Inter", sans-serif;
 }
@@ -63,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 /* A elements that don't have a class get default styles */
 a {
     text-decoration: none;
+    color: white;
 }
 
 a:not([class]) {
@@ -123,6 +125,9 @@ svg {
 .bg-dark {
     background-color: var(--bg-dark);
 }
+.bg-dark-light {
+    background-color: var(--bg-dark-light);
+}
 
 .container {
     position:relative;
@@ -135,6 +140,7 @@ svg {
     }
 
 }
+
 @media screen and (min-width: 500px) {
     .container {
         width:90%;
@@ -612,3 +618,102 @@ Contact section styles
         padding-right:1rem;
     }
 }
+
+/* FOOTER STYLES */
+
+.footer {
+    padding: 5rem 0 2.5rem;
+    color: white;
+}
+
+.footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap:2rem;
+}
+
+.three {
+    grid-column: 1/3;
+    grid-row:2;
+}
+
+.four {
+    grid-column: 1/3;
+    grid-row:3;
+}
+
+.footer-content > article > a {
+    color: white;
+}
+
+
+.footer-list > li {
+    padding: 0.5rem 0;
+}
+
+.footer-list > li > a {
+    color: white;
+    padding: 0.1rem 0;
+}
+.blue-hover > li > a:hover {
+    border-bottom: solid 2px var(--clr-blue)
+}
+.orange-hover > li > a:hover {
+    border-bottom: solid 2px var(--clr-orange)
+}
+
+.footer-bio {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-bio-top > h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--clr-blue)
+}
+
+.footer-bio-top > a:hover {
+    border-bottom: solid 2px white;
+    padding-bottom: 0.1rem;
+}
+
+.footer-bio-bottom {
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.footer-text-small {
+    font-size: 0.9rem;
+}
+
+@media screen and (min-width: 600px) {
+    .footer-content {
+        padding:2rem 0;
+        grid-template-columns: repeat(3, 1fr);
+        /* justify-content: space-between; */
+        /* flex-wrap: wrap; */
+    }
+    
+    .three {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    
+    .four {
+        grid-column: 1/4;
+        grid-row: 2;
+    }
+
+    .footer-bio-bottom {
+        text-align: right;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer-bio-bottom {
+        text-align: left;
+    }
+}
+
