@@ -33,7 +33,7 @@
 
 html,
 body {
-    height:200%;
+    height:100%;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -50,9 +50,10 @@ html:focus-within {
 /* Set core body defaults */
 body {
     min-width: 100vw;
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -143,6 +144,10 @@ svg {
     }
 }
 
+.fixed {
+    position: fixed;
+}
+
 .grid {
     display:grid;
 }
@@ -171,10 +176,6 @@ svg {
 
 .flex-column {
     flex-direction: column;
-}
-
-.fixed {
-    position: fixed;
 }
 
 .error {
@@ -229,6 +230,7 @@ svg {
         width:100%;
         display: block;
         position:fixed;
+        inset: 0 auto auto 0;
 
     }
 
@@ -262,6 +264,10 @@ svg {
 }
 
 @media screen and (min-width: 700px) {
+
+    .hero-grid {
+        min-height: 50vh;
+    }
     .hero-image {
         width:100%;
     }
@@ -269,9 +275,12 @@ svg {
 
 .hero-content {
     padding:1rem;
-    align-items: start;
-    width: min(400px, 90%);
-    margin: auto;
+}
+
+@media screen and (min-width: 500px) {
+    .hero-content {
+        padding: 0;
+    }
 }
 
 
@@ -353,7 +362,7 @@ svg {
 @media screen and (min-width: 600px) {
     .hero-content {
         width: min(450px, 90%);
-        padding: 0 0 0 5rem;
+        padding: 0;
         align-items: start;
         margin: 0;
     }
@@ -371,13 +380,17 @@ svg {
     }
 }
 
-@media screen and (min-width: 850px) {
+/* @media screen and (min-width: 850px) {
     .hero-content {
         width: min(500px, 90%)
     }
-}
+} */
 
 @media screen and (min-width: 1000px) {
+
+    .hero-image {
+        max-height: 100vh;
+    }
     .hero-content {
         width: min(700px, 90%);
     }
@@ -385,7 +398,7 @@ svg {
 
 @media screen and (min-width: 1400px) {
     .hero-content {
-        margin: auto;
+        /* margin: auto; */
         padding: 0;
     }
 }
@@ -393,9 +406,6 @@ svg {
 
 /* Project section styles */
 
-.project-content-container {
-    padding: 1rem 1rem 1rem;
-}
 
 .project-title-links-container {
     flex-direction: column;
@@ -468,7 +478,6 @@ svg {
 .about-picture {
     min-height: 100%;
     object-fit: cover;
-    border-radius:5%;
 }
 
 .about-action-mobile {
@@ -512,6 +521,10 @@ svg {
 
     .about-image-container {
         max-width: 50%;
+    }
+
+    .about-picture {
+        border-radius:15px 15px 15px 15px / 15px 15px 15px 15px;
     }
 
     .about-action-mobile {
