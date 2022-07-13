@@ -66,7 +66,7 @@
                         >
                             About Me</a>
                         <a 
-                            href="#" 
+                            href="#projects" 
                             class="button button-blue"
                         >
                             My Projects</a>
@@ -98,14 +98,14 @@
                     >
                     <div class="flex action-button-container about-action-mobile">
                         <a href="#contact" class="button button-orange">Contact Me</a>
-                        <a href="#about" class="button button-blue">Learn More</a>
+                        {{-- <a href="#about" class="button button-blue">Learn More</a> --}}
                     </div>
                 </div>
                 <article class="flex about-description-container">
                     <x-aboutstats></x-aboutstats>
                     <div class="flex action-button-container about-action-large ">
                         <a href="#contact" class="button button-orange">Contact Me</a>
-                        <a href="#about" class="button button-blue">Learn More</a>
+                        {{-- <a href="#about" class="button button-blue">Learn More</a> --}}
                     </div>
                 </article>
             </article>
