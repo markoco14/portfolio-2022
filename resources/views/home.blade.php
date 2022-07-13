@@ -110,60 +110,67 @@
                 </article>
             </article>
         </section>
-        <section id="contact" class="section">
+        <section id="contact" class="grid grid-stack section-image-bg">
             <article class="flex container contact-container">
-                <h2 class="heading contact-heading">
+                <h2 class="heading heading-margin contact-heading">
                     <span>Contact</span> Me
-                </h2>
-                @if(Session::has('success'))
-                <p>{{ Session::get('success') }}</p>
-                @endif
-                <div class="contact-content-container">
-                    <p class="form-description">
-                        I'm open to new opportunities. 
-                        I welcome both full-time and part-time work
-                        and I'm happy working in-office or remotely.
-                        If you feel that I can help you with your goals,
-                        or you would like to learn more,
-                        please feel free to send me a message.
-                        Thank you, I will get back to you as soon as possible.
-                    </p>
-                    <form 
-                        action="contact-me" 
-                        method="POST"
-                    >    
-                        @csrf
-                        <div class="flex control-group">
-                            <label class="text-highlight" for="name">Name</label>
-                            <input id="name" name="name" type="text">
-                            @error('name')
-                            <p class="error">{{$message}}</p>
-                            @enderror
-                        </div>
-                        <div class="flex control-group">
-                            <label class="text-highlight" for="email">Email</label>
-                            <input id="email" name="email" type="text">
-                            @error('email')
-                            <p class="error">{{$message}}</p>
-                            @enderror
-                        </div>
-                        <div class="flex control-group">
-                            <label class="text-highlight" for="message">Message</label>
-                            <textarea id="message" name="message" cols="30" rows="10"></textarea>
-                            @error('message')
-                            <p class="error">{{$message}}</p>
-                            @enderror
-                        </div>
-                        <div class="flex control-group">
-                            <button 
-                                type="submit"
-                                class="button button-blue"
-                            >
-                                Send
-                            </button>
-                        </div>
-                    </form>
+                </h2>  
+                <div class="grid contact-grid">
+                    <div class="flex contact-phrase-container contact-two">
+                        <p class="contact-phrase">
+                            Let's have a conversation about how 
+                            I can help you reach your goals.
+                        </p>
+                    </div>
+                    <div class="contact-one">
+                        <form 
+                            action="contact-me" 
+                            method="POST"
+                            class="contact-form"
+                        >    
+                            @if(Session::has('success'))
+                            <p>{{ Session::get('success') }}</p>
+                            @endif
+                            @csrf
+                            <div class="flex control-group">
+                                <label class="text-highlight" for="name">Name</label>
+                                <input id="name" name="name" type="text">
+                                @error('name')
+                                <p class="error">{{$message}}</p>
+                                @enderror
+                            </div>
+                            <div class="flex control-group">
+                                <label class="text-highlight" for="email">Email</label>
+                                <input id="email" name="email" type="text">
+                                @error('email')
+                                <p class="error">{{$message}}</p>
+                                @enderror
+                            </div>
+                            <div class="flex control-group">
+                                <label class="text-highlight" for="message">Message</label>
+                                <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                                @error('message')
+                                <p class="error">{{$message}}</p>
+                                @enderror
+                            </div>
+                            <div class="flex control-group">
+                                <button 
+                                    type="submit"
+                                    class="button button-blue"
+                                >
+                                    Send
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
                 </div>
             </article>
+            <img 
+                src="{{URL::asset("/images/contact_image.png")}}" 
+                alt="A pair of outstretched hands hover over the keys; wondering what to write next."
+                class="contact-image"
+            >
+            </div>
         </section>
     <x-footer></x-footer>

@@ -173,13 +173,23 @@ svg {
     position: relative;
 }
 
+.section-image-bg {
+    position: relative;
+    min-height:500px;
+}
+
 .container {
     position:relative;
     width:100%;
+    margin:auto;
 }
 
 .heading > span {
     color: var(--clr-blue);
+}
+
+.heading-margin {
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -564,20 +574,27 @@ CONTACT SECTION STYLES
 
 .contact-container {
     flex-direction: column;
+    margin: 5rem auto;
 }
 
-.contact-content-container {
+.contact-phrase-container {
+    align-items: center;
+}
+
+.contact-phrase {
+    background-color: white;
+    font-size:1.2rem;
+    font-weight:600;
     padding: 1rem;
+    border-radius: 10px 10px 0 0;
 }
 
-
-
-.contact-content-container {
-    padding-top: clamp(1rem, 2vw, 2rem);
-}
-
-.form-description {
-    margin-bottom: 1rem;
+.contact-form {
+    margin: 0;
+    min-width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
 }
 
 .control-group {
@@ -595,23 +612,49 @@ CONTACT SECTION STYLES
     padding: 0.5rem 0.5rem;
 }
 
-@media screen and (min-width: 500px) {
-    .contact-content-container {
-        padding: 1rem 0;
-        margin: auto;
-    }
-
-    
+.control-group > textarea {
+    max-height:10rem;
 }
 
-@media screen and (min-width: 1000px) {
-    .contact-container {
-        display:flex;
+.contact-image {
+    /* z-index: -1; */
+    object-fit: cover;
+    min-height:100%;
+}
+
+@media screen and (max-width: 499px) {
+    .contact-phrase {
+        border-radius: 0;
+    }
+    
+    .contact-form {
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .contact-grid {
+        grid-template-columns: 1.5fr 2fr;
+        place-content: center;
+        gap:2rem;
     }
 
-    .contact-content-container {
-        max-width: 75%;
-        padding-right:1rem;
+    .contact-one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .contact-two {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .contact-phrase {
+        border-radius: 10px 10px 10px 10px;
+    }
+    
+    .contact-form {
+        border-radius: 10px 10px 10px 10px;
     }
 }
 
