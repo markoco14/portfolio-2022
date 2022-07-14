@@ -92,5 +92,20 @@
             });
         });
 </script>
+<script async type="text/javascript">
+    navMenuButton = document.getElementById('nav-menu-button');
+    secondaryNav = document.getElementById('secondary-nav');
+    closeSecondaryNavButton = document.getElementById('close-secondary-nav');
+    
+    navMenuButton.addEventListener('click', () => {
+        if (secondaryNav.classList.value === 'secondary-nav-hidden') {
+            secondaryNav.classList.remove('secondary-nav-hidden');
+            secondaryNav.classList.add('secondary-nav');
+        } else {
+            secondaryNav.classList.remove('secondary-nav');
+            secondaryNav.classList.add('secondary-nav-hidden');
+        }
+    });
+</script>
 </body>
 </html>
