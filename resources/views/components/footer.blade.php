@@ -3,7 +3,7 @@
     <div class="container grid footer-content">
         <article class="three flex footer-bio">
             <div class="footer-bio-top">
-                <h2>Mark O'Connor</h2>
+                <p class="footer-bio-heading">Mark O'Connor</p>
                 <p>Full-Stack Developer</p>
                 <p class="footer-text-small">Taipei, Taiwan</p>
                 <a 
@@ -81,10 +81,9 @@
             $('.carousel-container').slick({
                 dots: true,
                 arrows: false,
-                mobileFirst: true,
                 responsive: [
                     {
-                        breakpoint: 500,
+                        breakpoint: 700,
                         settings: {
                             arrows: false,
                         }

@@ -48,6 +48,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Set core body defaults */
 body {
     min-width: 100vw;
@@ -100,23 +104,12 @@ svg {
 }
 
 /* Utility classes */
-
-.heading > span {
-    color: var(--clr-blue);
-}
-
-@media screen and (max-width: 500px) {
-    .heading {
-        text-align: center;
-        width:100%;
+/* @media (hover:none) and (max-width: 300px) {
+    .main > * {
+        width: 100vw;
     }
-}
 
-.section {
-    min-height: 500px;
-    padding: 5rem 0;
-    position: relative;
-}
+} */
 
 .relative {
     position: relative;
@@ -127,27 +120,6 @@ svg {
 }
 .bg-dark-light {
     background-color: var(--bg-dark-light);
-}
-
-.container {
-    position:relative;
-    width:100%;
-}
-
-@media screen and (max-width: 320px) {
-    .main > * {
-        width: 100vw;
-    }
-
-}
-
-@media screen and (min-width: 500px) {
-    .container {
-        width:90%;
-        max-width:1000px;
-        margin: auto;
-        position: relative;
-    }
 }
 
 .fixed {
@@ -192,7 +164,68 @@ svg {
     border-radius:5%;
 }
 
-/* Nav section styles begin here */
+
+/* SECTION & SECTION HEADING STYLES */
+
+.section {
+    min-height: 500px;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.section-image-bg {
+    position: relative;
+    min-height:500px;
+}
+
+.container {
+    position:relative;
+    width:100%;
+    margin:auto;
+}
+
+.heading > span {
+    color: var(--clr-blue);
+}
+
+.heading-margin {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        padding-left: 1rem;
+        text-align: left;
+        width:100%;
+    }
+}
+
+.project-heading,
+.about-heading,
+.contact-heading {
+    position: relative;
+    font-size: clamp(1.5rem, 8vh, 4rem);
+    font-weight: 700;
+    z-index: 10;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        width:90%;
+        max-width:1000px;
+        margin: auto;
+        position: relative;
+    }
+
+    .project-heading,
+    .about-heading,
+    .contact-heading {
+        padding-left: 0;        
+        font-size: clamp(2.25rem, 8vw, 6rem);
+    }
+}
+
+/* HEADER AND NAV STYLES*/
 
 .mobile-logo {  
     display: none;
@@ -259,7 +292,7 @@ svg {
     }
 }
 
-/* Hero section styles begin here */
+/* HERO SECTION STYLES */
 
 .hero-grid > * {
     color: white;
@@ -409,9 +442,24 @@ svg {
     }
 }
 
+/* PROJECT SECTION STYLES */
 
-/* Project section styles */
+.slick-prev::before,
+.slick-next::before {
+    height: 40px !important;
+    font-size: 40px !important;
+    z-index: 9999;
+}
 
+.slick-prev::before {
+    position:relative;
+    color: var(--clr-blue) !important;
+}
+
+.slick-next::before {
+    position:relative;
+    color: var(--clr-blue) !important;
+}
 
 .project-title-links-container {
     flex-direction: column;
@@ -426,13 +474,6 @@ svg {
     background-color: var(--bg-dark-50);
     border-radius: 10px 10px 0 0 / 10px 10px 0 0;
 
-}
-
-.project-heading {
-    position: relative;
-    font-size: clamp(1.5rem, 8vh, 4rem);
-    font-weight: 700;
-    z-index: 10;
 }
 
 .project-image-buttons-container {
@@ -462,19 +503,11 @@ svg {
     }    
 }
 
-/* About section styles */
+/* ABOUT SECTION STYLES */
 
 .about-container {
     color:white;
     flex-wrap:wrap;
-}
-
-.about-heading {
-    color: white;
-    position: relative;
-    font-size: clamp(1.5rem, 8vh, 4rem);
-    font-weight: 700;
-    z-index: 10;
 }
 
 .about-image-container {
@@ -520,11 +553,6 @@ svg {
 }
 
 @media screen and (min-width: 500px) {
-    .about-heading {
-        padding-left: 0;
-        font-size: clamp(2.25rem, 8vw, 6rem);
-    }
-
     .about-image-container {
         max-width: 50%;
     }
@@ -555,31 +583,33 @@ svg {
 
 /***
 ***
-Contact section styles 
+CONTACT SECTION STYLES
 ***
 ***/
 
 .contact-container {
     flex-direction: column;
+    margin: 5rem auto;
 }
 
-.contact-content-container {
+.contact-phrase-container {
+    align-items: center;
+}
+
+.contact-phrase {
+    background-color: white;
+    font-size:1.2rem;
+    font-weight:600;
     padding: 1rem;
+    border-radius: 10px 10px 0 0;
 }
 
-.contact-heading {
-    position: relative;
-    font-size: clamp(1.5rem, 8vh, 4rem);
-    font-weight: 700;
-    z-index: 10;
-}
-
-.contact-content-container {
-    padding-top: clamp(1rem, 2vw, 2rem);
-}
-
-.form-description {
-    margin-bottom: 1rem;
+.contact-form {
+    margin: 0;
+    min-width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
 }
 
 .control-group {
@@ -597,25 +627,49 @@ Contact section styles
     padding: 0.5rem 0.5rem;
 }
 
-@media screen and (min-width: 500px) {
-    .contact-content-container {
-        padding: 1rem 0;
-        margin: auto;
-    }
+.control-group > textarea {
+    max-height:10rem;
+}
 
-    .contact-heading {
-        font-size: clamp(2.25rem, 8vw, 6rem);
+.contact-image {
+    /* z-index: -1; */
+    object-fit: cover;
+    min-height:100%;
+}
+
+@media screen and (max-width: 499px) {
+    .contact-phrase {
+        border-radius: 0;
+    }
+    
+    .contact-form {
+        border-radius: 0;
     }
 }
 
-@media screen and (min-width: 1000px) {
-    .contact-container {
-        display:flex;
+@media screen and (min-width: 700px) {
+    .contact-grid {
+        grid-template-columns: 1.5fr 2fr;
+        place-content: center;
+        gap:2rem;
     }
 
-    .contact-content-container {
-        max-width: 75%;
-        padding-right:1rem;
+    .contact-one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .contact-two {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .contact-phrase {
+        border-radius: 10px 10px 10px 10px;
+    }
+    
+    .contact-form {
+        border-radius: 10px 10px 10px 10px;
     }
 }
 
@@ -673,6 +727,12 @@ Contact section styles
     color: var(--clr-blue)
 }
 
+.footer-bio-heading {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--clr-blue)
+}
+
 .footer-bio-top > a:hover {
     border-bottom: solid 2px white;
     padding-bottom: 0.1rem;
@@ -690,7 +750,7 @@ Contact section styles
 @media screen and (min-width: 600px) {
     .footer-content {
         padding:2rem 0;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1.2fr;
         /* justify-content: space-between; */
         /* flex-wrap: wrap; */
     }
@@ -705,9 +765,19 @@ Contact section styles
         grid-row: 2;
     }
 
-    .footer-bio-bottom {
+    .footer-bio {
+        text-align: right;
+    }
+
+    .footer-bio-bottom > * {
         text-align: right;
         font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
