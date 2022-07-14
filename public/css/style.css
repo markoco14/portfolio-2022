@@ -312,6 +312,13 @@ svg {
 
 }
 
+/* To fix overflow on very narrow screens on mobile */
+@media (hover:none) and (max-width: 300px) {
+    .desktop-one {
+        display: none;
+    }
+}
+
 @media (hover:none) and (max-width: 600px) {
     .mobile-logo {
         background-color: var(--bg-dark-50);
