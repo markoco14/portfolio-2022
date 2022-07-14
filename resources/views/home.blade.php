@@ -30,28 +30,27 @@
         <nav role="primary-navigation" class="navbar">
             <ul 
                 role="list" 
-                class="grid nav-list"
-                {{-- class="flex nav-list" --}}
+                class="grid primary-nav-list"
             >
-                <li>
+                <li class="desktop-one">
                     <a href="#">
-                        {{-- <i class="fas fa-home"></i>  --}}
+                        <i class="fas fa-home"></i> 
                         <span>Home</span>
                     </a>
                 </li>
-                <li>
+                <li class="desktop-two">
                     <a href="https://www.cakeresume.com/mark-o-connor" target="_blank" rel="noopener noreferrer">
-                        {{-- <i class="fas fa-file-alt"></i>  --}}
+                        <i class="fas fa-file-alt"></i> 
                         <span>Resume</span>
                     </a>
                     </li>
-                <li>
+                <li class="desktop-three">
                     <a href="#projects">
-                        {{-- <i class="fas fa-folder-open"></i>  --}}
+                        <i class="fas fa-folder-open"></i> 
                         <span>Projects</span>
                     </a>
                 </li>
-                <li role="secondary-navigation-toggle">
+                <li class="desktop-four-mob-one" role="secondary-navigation-toggle">
                     <button 
                         id="nav-menu-button"
                         class="nav-button"
@@ -87,7 +86,7 @@
                 </li>
                 <li>
                     <a href="#contact">
-                        <i class="fas fas fa-heart"></i>
+                        <i class="fas fa-comment-alt"></i>
                         <span>Contact</span>
                     </a>
                 </li>
