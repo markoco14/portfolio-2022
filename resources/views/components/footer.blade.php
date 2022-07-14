@@ -81,10 +81,9 @@
             $('.carousel-container').slick({
                 dots: true,
                 arrows: false,
-                mobileFirst: true,
                 responsive: [
                     {
-                        breakpoint: 500,
+                        breakpoint: 700,
                         settings: {
                             arrows: false,
                         }
