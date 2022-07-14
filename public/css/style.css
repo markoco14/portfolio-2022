@@ -240,10 +240,6 @@ svg {
     padding:1rem;
 }
 
-.mobile-show {
-    display: none;
-}
-
 .navbar {
     padding:1rem;
 }
@@ -303,6 +299,10 @@ svg {
     display: flex;
     justify-content: left;
     gap:0.5rem;
+}
+
+.secondary-nav-list > li > a:hover {
+    border-bottom: 2px solid var(--clr-blue);
 }
 
 .secondary-nav-list > li > a > i {
@@ -382,6 +382,11 @@ svg {
     .secondary-nav-list {
         padding-left: 2rem;
     }
+
+    .secondary-nav-list > li > a:focus {
+        border-bottom: 2px solid var(--clr-blue);
+    }
+    
 }
 
 /* HERO SECTION STYLES */
