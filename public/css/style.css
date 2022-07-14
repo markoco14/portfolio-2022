@@ -712,6 +712,12 @@ CONTACT SECTION STYLES
     color: var(--clr-blue)
 }
 
+.footer-bio-heading {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--clr-blue)
+}
+
 .footer-bio-top > a:hover {
     border-bottom: solid 2px white;
     padding-bottom: 0.1rem;
@@ -729,7 +735,7 @@ CONTACT SECTION STYLES
 @media screen and (min-width: 600px) {
     .footer-content {
         padding:2rem 0;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1.2fr;
         /* justify-content: space-between; */
         /* flex-wrap: wrap; */
     }
@@ -744,9 +750,19 @@ CONTACT SECTION STYLES
         grid-row: 2;
     }
 
-    .footer-bio-bottom {
+    .footer-bio {
+        text-align: right;
+    }
+
+    .footer-bio-bottom > * {
         text-align: right;
         font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
