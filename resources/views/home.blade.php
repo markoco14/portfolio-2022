@@ -16,35 +16,87 @@
     {{-- slick css --}}
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    {{-- font-awesome --}}
+    <script src="https://kit.fontawesome.com/d0c81e3c08.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="navbar fixed flex">
+    <header class="header fixed flex">
         <div class="mobile-logo">
-            Markodevo
+            Mark O'Connor
         </div>
         <div class="large-screen-logo">
-            Markodevo
+            Mark O'Connor
         </div>
-        <nav>
-            <ul class="nav-list flex" role="list">
+        <nav role="primary-navigation" class="navbar">
+            <ul 
+                role="list" 
+                class="grid nav-list"
+                {{-- class="flex nav-list" --}}
+            >
                 <li>
                     <a href="#">
-                        Home
+                        {{-- <i class="fas fa-home"></i>  --}}
+                        <span>Home</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.cakeresume.com/mark-o-connor" target="_blank" rel="noopener noreferrer">
-                        Resume
+                        {{-- <i class="fas fa-file-alt"></i>  --}}
+                        <span>Resume</span>
                     </a>
                     </li>
                 <li>
                     <a href="#projects">
-                        Projects
+                        {{-- <i class="fas fa-folder-open"></i>  --}}
+                        <span>Projects</span>
                     </a>
-                    </li>
-                <button class="nav-button">
-                    H
-                </button>
+                </li>
+                <li role="secondary-navigation-toggle">
+                    <button 
+                        id="nav-menu-button"
+                        class="nav-button"
+                    >
+                        <i class="fas fa-bars" style="color: white;"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <nav role="secondary-navigation" id="secondary-nav" class="secondary-nav-hidden">
+            {{-- <span id="close-secondary-nav" class="absolute secondary-nav-close"><i class="fas fa-times"></i></span> --}}
+            <ul 
+                role="list" 
+                class="secondary-nav-list"
+            >
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        <i class="fas fa-user-circle"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i class="fas fas fa-heart"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.cakeresume.com/mark-o-connor">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Resume</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
