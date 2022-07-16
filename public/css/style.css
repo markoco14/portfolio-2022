@@ -696,9 +696,8 @@ CONTACT SECTION STYLES
     position: fixed;
     background-color: var(--clr-blue);
     padding: 1rem;
-    inset: 3rem auto auto 25%;
-    width:50%;
-    margin: 0 auto;
+    inset: 3rem auto auto 5%;
+    width:90%;
     min-height:50px;
     z-index: 9999;
     border-radius: 10px 10px 10px 10px
@@ -709,11 +708,8 @@ CONTACT SECTION STYLES
     margin: 5rem auto;
 }
 
-
-
 .contact-phrase {
     flex-grow: 1;
-    /* width: 100%; */
     background-color: white;
     font-size:1.2rem;
     font-weight:600;
@@ -749,7 +745,6 @@ CONTACT SECTION STYLES
 }
 
 .contact-image {
-    /* z-index: -1; */
     object-fit: cover;
     min-height:100%;
 }
@@ -765,6 +760,11 @@ CONTACT SECTION STYLES
 }
 
 @media screen and (min-width: 700px) {
+
+    .contact-success {
+        inset: 3rem auto auto 25%;
+        width: 50%;
+    }
     .contact-grid {
         grid-template-columns: 1.5fr 2fr;
         place-content: center;
@@ -784,7 +784,6 @@ CONTACT SECTION STYLES
     .contact-phrase-container {
         margin-top:30%;
         align-self: flex-start;
-        /* align-items: center; */
     }
 
     .contact-phrase {

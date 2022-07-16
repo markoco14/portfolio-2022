@@ -102,6 +102,18 @@
         </nav>
     </header>
     <main>
+        <div class="relative" style="width:100%;">
+            @if(Session::has('success'))
+                    <p 
+                        x-data="{ show: true }"
+                        x-init="setTimeout(() => show = false, 5000)"
+                        x-show='show'
+                        class="contact-success"
+                    >
+                        {{ Session::get('success') }}
+                    </p>
+                @endif
+        </div>
         <section id="home" class="grid grid-stack hero-grid">
             <div class="container flex flex-column">
                 <article class="hero-content">
@@ -164,16 +176,6 @@
             </article>
         </section>
         <section id="contact" class="grid grid-stack section-image-bg">
-            @if(Session::has('success'))
-                <p 
-                    x-data="{ show: true }"
-                    x-init="setTimeout(() => show = false, 5000)"
-                    x-show='show'
-                    class="contact-success"
-                >
-                    {{ Session::get('success') }}
-                </p>
-            @endif
             <article class="flex container contact-container">
                 <h2 class="heading heading-margin contact-heading">
                     <span>Contact</span> Me
