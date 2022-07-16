@@ -576,8 +576,6 @@ svg {
     margin-bottom:0.5rem;
     color: white;
     background-color: var(--bg-dark-50);
-    border-radius: 10px 10px 0 0 / 10px 10px 0 0;
-
 }
 
 .project-image-buttons-container {
@@ -588,6 +586,7 @@ svg {
 }
 
 .project-image {
+    display: none !important;
     object-fit: cover;
     min-width: 100%;
     min-height: 400px;
@@ -595,16 +594,33 @@ svg {
     z-index: -1;
 }
 
+.mobile-project-image {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 400px;
+    max-height: 600px;
+    z-index: -1;
+}
 
 @media screen and (min-width: 500px) {
+    .project-content-heading {
+        border-radius: 10px 10px 0 0 / 10px 10px 0 0;
+    }
+    
     .project-image-buttons-container > * {
         flex-basis: min(160px, 35%);
         flex-grow:0;
     }
 
     .project-image {
+        display: block !important;
         border-radius: 10px / 10px;
-    }    
+    } 
+
+    .mobile-project-image {
+        display: none !important;
+    }
+    
 }
 
 /* ABOUT SECTION STYLES */
