@@ -42,7 +42,7 @@
             </div>
         </article>
         <article>
-            <div class="project-content-container">
+            <div class="project-csontent-container">
                 {{-- <p>
                     An expense tracker that records your daily spending 
                     and makes sure you're never over budget.
@@ -53,7 +53,7 @@
                     <h3 class="project-content-heading">Scriptt</h3>
                     <div class="flex project-image-buttons-container">
                         <a 
-                            href="https://github.com/markoco14/expense-tracker"
+                            href="https://github.com/markoco14/dialogue-writer-app"
                             target="_blank"
                             rel="noopenner noreferrer" 
                             class="button button-orange"
@@ -61,7 +61,7 @@
                             Review Code
                         </a>
                         <a 
-                            href="https://mymoneybags.herokuapp.com"
+                            href="https://markoco14.github.io/dialogue-writer-app/"
                             target="_blank"
                             rel="noopenner noreferrer" 
                             class="button button-blue"
@@ -97,7 +97,7 @@
                     <h3 class="project-content-heading">Covid Taichung Search FAQ</h3>
                     <div class="flex project-image-buttons-container">
                         <a 
-                            href="https://github.com/markoco14/expense-tracker"
+                            href="https://github.com/markoco14/covid-taichung-faq-repo"
                             target="_blank"
                             rel="noopenner noreferrer" 
                             class="button button-orange"
@@ -105,7 +105,7 @@
                             Review Code
                         </a>
                         <a 
-                            href="https://mymoneybags.herokuapp.com"
+                            href="https://covid-taichung.github.io/cfiw/faq.html"
                             target="_blank"
                             rel="noopenner noreferrer" 
                             class="button button-blue"
@@ -141,7 +141,7 @@
                     <h3 class="project-content-heading">Covid Taichung Info Site</h3>
                     <div class="flex project-image-buttons-container">
                         <a 
-                            href="https://github.com/markoco14/expense-tracker"
+                            href="https://github.com/markoco14/cfiw"
                             target="_blank"
                             rel="noopenner noreferrer" 
                             class="button button-orange"
@@ -149,7 +149,7 @@
                             Review Code
                         </a>
                         <a 
-                            href="https://mymoneybags.herokuapp.com"
+                            href="https://covid-taichung.github.io/cfiw/"
                             target="_blank"
                             rel="noopenner noreferrer" 
                             class="button button-blue"
@@ -185,7 +185,7 @@
                     <h3 class="project-content-heading">Taiwan Tax and Income Calculator</h3>
                     <div class="flex project-image-buttons-container">
                         <a 
-                            href="https://github.com/markoco14/expense-tracker"
+                            href="https://github.com/markoco14/tiss"
                             target="_blank"
                             rel="noopenner noreferrer" 
                             class="button button-orange"
@@ -193,7 +193,7 @@
                             Review Code
                         </a>
                         <a 
-                            href="https://mymoneybags.herokuapp.com"
+                            href="https://markoco14.github.io/tiss/"
                             target="_blank"
                             rel="noopenner noreferrer" 
                             class="button button-blue"
