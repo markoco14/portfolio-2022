@@ -31,8 +31,7 @@ class PortfolioContactForm extends Mailable
      */
     public function build()
     {
-        $today = Carbon::today('Asia/Taipei')->toDateString();
-        return $this->subject($today . ': Email from ' . ENV('MAIL_FROM_NAME'))
+        return $this->subject($this->details['date'] . ': Email from ' . $this->details['name'] . ' at ' . ENV('MAIL_FROM_NAME'))
                 ->view('components/contact_email');
     }
 }

@@ -30,7 +30,8 @@ class ContactController extends Controller
             'name' => $contact->name,
             'email' => $contact->email,
             'subject' => $contact->subject,
-            'message' => $contact->message
+            'message' => $contact->message,
+            'date' => $date,
         ];
     
         Mail::to('mark.oconnor14@gmail.com')->send(new \App\Mail\PortfolioContactForm($details));
