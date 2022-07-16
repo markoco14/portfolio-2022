@@ -1,5 +1,5 @@
 <div class="container">
-    <h2 class="heading heading-margin project-heading"><span>Completed</span> Projects</h2>
+    <h2 class="heading heading-margin project-heading"><span>Projects</span></h2>
     <div class="carousel-container">
         <article>
             <div class="grid grid-stack-bottom">

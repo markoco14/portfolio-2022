@@ -572,7 +572,7 @@ svg {
 .project-content-heading {
     font-weight: 600;
     font-size: 2rem;
-    padding: 0.5rem;
+    padding: 1rem;
     margin-bottom:0.5rem;
     color: white;
     background-color: var(--bg-dark-50);
@@ -597,8 +597,8 @@ svg {
 .mobile-project-image {
     object-fit: cover;
     min-width: 100%;
-    min-height: 400px;
-    max-height: 600px;
+    min-height: 300px;
+    max-height: 400px;
     z-index: -1;
 }
 

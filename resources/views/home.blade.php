@@ -154,7 +154,7 @@
         </section>
         <section id="about" class="bg-dark relative" style="padding: 5rem 0;">
             <article class="flex container about-container">
-                <h2 class="heading about-heading">About <span>Mark</span></h2>
+                <h2 class="heading about-heading">About</h2>
                 <div class="about-image-container">
                     <img 
                         class="about-picture"
@@ -178,7 +178,7 @@
         <section id="contact" class="grid grid-stack section-image-bg">
             <article class="flex container contact-container">
                 <h2 class="heading heading-margin contact-heading">
-                    <span>Contact</span> Me
+                    <span>Contact</span>
                 </h2>  
                 <div class="grid contact-grid">
                     <div class="flex contact-phrase-container contact-two">
