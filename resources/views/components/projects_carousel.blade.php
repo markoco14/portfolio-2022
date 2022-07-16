@@ -36,7 +36,7 @@
                 </div>
                 <img 
                 src="{{URL::asset('images/expensave_project_pic.png ')}}" 
-                alt="A lady using expensave app on a tablet"
+                alt="A person records their spending while shopping on Black Friday."
                 class="project-image"
                 >
             </div>
@@ -80,7 +80,7 @@
                 </div>
                 <img 
                 src="{{URL::asset('images/script_project_pic.png ')}}" 
-                alt="A man checking his iphone while using a laptop."
+                alt="A lady writes a dialogue for her students."
                 class="project-image"
                 >
             </div>
@@ -124,7 +124,7 @@
                 </div>
                 <img 
                 src="{{URL::asset('images/covid_faq_project_pic.png ')}}" 
-                alt="A lady using expensave app on a tablet"
+                alt="A person searches for answers about Covid-19 while drinking coffee."
                 class="project-image"
                 >
             </div>
@@ -168,7 +168,7 @@
                 </div>
                 <img 
                 src="{{URL::asset('images/covid_info_project_pic.png ')}}" 
-                alt="A lady using expensave app on a tablet"
+                alt="A man views the latest Covid-19 statistics on his phone."
                 class="project-image"
                 >
             </div>
@@ -212,7 +212,7 @@
                 </div>
                 <img 
                 src="{{URL::asset('images/tiss_project_pic.png ')}}" 
-                alt="A lady using expensave app on a tablet"
+                alt="A person calculates their income taxes on an iPad."
                 class="project-image"
                 >
             </div>
