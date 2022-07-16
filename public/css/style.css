@@ -709,11 +709,11 @@ CONTACT SECTION STYLES
     margin: 5rem auto;
 }
 
-.contact-phrase-container {
-    align-items: center;
-}
+
 
 .contact-phrase {
+    flex-grow: 1;
+    /* width: 100%; */
     background-color: white;
     font-size:1.2rem;
     font-weight:600;
@@ -781,7 +781,14 @@ CONTACT SECTION STYLES
         grid-row: 1;
     }
 
+    .contact-phrase-container {
+        margin-top:30%;
+        align-self: flex-start;
+        /* align-items: center; */
+    }
+
     .contact-phrase {
+        flex-grow:0;
         border-radius: 10px 10px 10px 10px;
     }
     

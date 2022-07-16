@@ -180,9 +180,12 @@
                 </h2>  
                 <div class="grid contact-grid">
                     <div class="flex contact-phrase-container contact-two">
-                        <p class="contact-phrase">
+                        {{-- <p class="contact-phrase">
                             Let's have a conversation about how 
                             I can help you reach your goals.
+                        </p> --}}
+                        <p class="contact-phrase">
+                            How I can help you reach your goals?
                         </p>
                     </div>
                     <div class="contact-one">
