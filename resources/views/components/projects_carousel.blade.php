@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <img 
-                    src="{{URL::asset('images/expensave_project_pic.png')}}" 
+                    src="{{URL::asset('images/desktop_expensave_project_pic.jpg')}}" 
                     alt="A person records their spending while shopping on Black Friday."
                     class="project-image"
                 >
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <img 
-                src="{{URL::asset('images/script_project_pic.png')}}" 
+                src="{{URL::asset('images/desktop_script_project_pic.jpg')}}" 
                 alt="A lady writes a dialogue for her students."
                 class="project-image"
                 >
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <img 
-                    src="{{URL::asset('images/covid_faq_project_pic.png')}}" 
+                    src="{{URL::asset('images/desktop_covid_faq_project_pic.jpg')}}" 
                     alt="A person searches for answers about Covid-19 while drinking coffee."
                     class="project-image"
                 >
@@ -162,7 +162,7 @@
                     </div>
                 </div>
                 <img 
-                    src="{{URL::asset('images/covid_info_project_pic.png')}}" 
+                    src="{{URL::asset('images/desktop_covid_info_project_pic.jpg')}}" 
                     alt="A man views the latest Covid-19 statistics on his phone."
                     class="project-image"
                 >
@@ -205,7 +205,7 @@
                     </div>
                 </div>
                 <img 
-                    src="{{URL::asset('images/tiss_project_pic.png')}}" 
+                    src="{{URL::asset('images/desktop_tiss_project_pic.jpg')}}" 
                     alt="A person calculates their income taxes on an iPad."
                     class="project-image"
                 >
