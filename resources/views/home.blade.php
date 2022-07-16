@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     {{-- font-awesome --}}
     <script src="https://kit.fontawesome.com/d0c81e3c08.js" crossorigin="anonymous"></script>
+    {{-- alpine js --}}
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
     <header class="header fixed flex">
@@ -162,6 +164,16 @@
             </article>
         </section>
         <section id="contact" class="grid grid-stack section-image-bg">
+            @if(Session::has('success'))
+                <p 
+                    x-data="{ show: true }"
+                    x-init="setTimeout(() => show = false, 5000)"
+                    x-show='show'
+                    class="contact-success"
+                >
+                    {{ Session::get('success') }}
+                </p>
+            @endif
             <article class="flex container contact-container">
                 <h2 class="heading heading-margin contact-heading">
                     <span>Contact</span> Me
@@ -179,9 +191,6 @@
                             method="POST"
                             class="contact-form"
                         >    
-                            @if(Session::has('success'))
-                            <p>{{ Session::get('success') }}</p>
-                            @endif
                             @csrf
                             <div class="flex control-group">
                                 <label class="text-highlight" for="name">Name</label>

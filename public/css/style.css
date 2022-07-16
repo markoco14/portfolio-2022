@@ -288,7 +288,7 @@ svg {
 }
 
 .secondary-nav-list {
-    padding:5rem 5rem 0;
+    padding:5rem 6rem 0;
 }
 
 .secondary-nav-list > li {
@@ -690,6 +690,19 @@ svg {
 CONTACT SECTION STYLES
 ***
 ***/
+
+.contact-success {
+    color: white;
+    position: fixed;
+    background-color: var(--clr-blue);
+    padding: 1rem;
+    inset: 3rem auto auto 25%;
+    width:50%;
+    margin: 0 auto;
+    min-height:50px;
+    z-index: 9999;
+    border-radius: 10px 10px 10px 10px
+}
 
 .contact-container {
     flex-direction: column;
