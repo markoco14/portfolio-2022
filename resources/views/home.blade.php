@@ -139,7 +139,7 @@
                 </article>
             </div>
             <img 
-                src="{{URL::asset("/images/screen_glow_1.png")}}" 
+                src="{{URL::asset("/images/desktop_screen_glow.jpg")}}" 
                 alt="Swirls of neon light glow from a screen in the night."
                 class="hero-image" 
             >
