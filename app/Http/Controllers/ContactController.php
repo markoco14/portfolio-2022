@@ -17,12 +17,12 @@ class ContactController extends Controller
             'message' => 'required',
         ]);
 
-        $today = Carbon::today('Asia/Taipei')->toDateString();
+        $date = Carbon::today('Asia/Taipei')->toDateString();
         
         $contact = new Contact;
         $contact->name = $request->name;
         $contact->email = $request->email;
-        $contact->subject = $today .': Email from Portfolio2022';
+        $contact->subject = $date .': Email from ' . $request->name . ' Portfolio 2022';
         $contact->message = $request->message;
         $contact->save();
 
@@ -35,11 +35,9 @@ class ContactController extends Controller
     
         Mail::to('mark.oconnor14@gmail.com')->send(new \App\Mail\PortfolioContactForm($details));
     
-
-        // dd($contact);
-        return back()->with('success', 
-            'Hi, ' . $request->name . '! Thank you for contacting me! 
-            I will get back to you as soon as possible.'
+        return redirect(url()->previous() . '#contact')->with('success', 
+            'Hi ' . $request->name . ', your message was sent. 
+            Thank you for contacting me, I will reply as soon as possible.'
         );
     }
 }
