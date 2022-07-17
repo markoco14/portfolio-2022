@@ -53,9 +53,9 @@
     alt="A pair of outstretched hands hover over the keys; wondering what to write next."
     class="contact-image"
 >
-<img 
+{{-- <img 
     src="{{URL::asset("/images/mobile_contact_image.jpg")}}" 
     alt="A pair of outstretched hands hover over the keys; wondering what to write next."
     class="mobile-contact-image"
->
+> --}}
 </div>
