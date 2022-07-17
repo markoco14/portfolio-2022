@@ -3,16 +3,15 @@
         <span>Contact</span>
     </h2>  
     <div class="grid contact-grid">
-        {{-- <div class="flex contact-phrase-container contact-two">
-            <p class="contact-phrase">
+            <p>
+            {{-- <p class="contact-grid-two contact-phrase"> --}}
                 How I can help you reach your goals?
             </p>
-        </div> --}}
-        {{-- <div class="contact-one">
+        {{-- <div class="contact-one"> --}}
             <form 
                 action="contact-me" 
                 method="POST"
-                class="contact-form"
+                {{-- class="contact-grid-one contact-form" --}}
             >    
                 @csrf
                 <div class="flex control-group">
@@ -45,7 +44,7 @@
                     </button>
                 </div>
             </form>
-        </div> --}}
+        {{-- </div> --}}
     </div>
 </article>
 <img 
