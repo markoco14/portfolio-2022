@@ -2,7 +2,7 @@
     <h2 class="heading heading-margin contact-heading">
         <span>Contact</span>
     </h2>  
-    <div class="grid contact-grid">
+    <div>
             <p style="padding: 1rem; background-color: white;">
             {{-- <p class="contact-grid-two contact-phrase"> --}}
                 How I can help you reach your goals?
@@ -11,7 +11,12 @@
             <form 
                 action="contact-me" 
                 method="POST"
-                style="padding: 1rem; background-color: white;"
+                style="
+                padding: 1rem; 
+                background-color: white; 
+                border: solid black 2px;
+                max-width: 100vw;
+                "
                 {{-- class="contact-grid-one contact-form" --}}
             >    
                 @csrf
