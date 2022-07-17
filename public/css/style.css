@@ -629,6 +629,10 @@ svg {
 
 /* ABOUT SECTION STYLES */
 
+.about-heading {
+    width:100%;
+}
+
 .about-container {
     color:white;
     flex-wrap:wrap;
