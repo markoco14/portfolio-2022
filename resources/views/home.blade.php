@@ -175,7 +175,7 @@
                 </article>
             </article>
         </section>
-        {{-- <section id="contact" class="grid grid-stack section-image-bg">
+        <section id="contact" class="grid grid-stack section-image-bg">
             <x-contact_section></x-contact_section>
-        </section> --}}
+        </section>
     <x-footer></x-footer>
