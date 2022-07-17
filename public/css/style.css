@@ -778,6 +778,7 @@ CONTACT SECTION STYLES
     
     .contact-form {
         border-radius: 0;
+        max-width:100%;
     }
 
     .contact-image {
