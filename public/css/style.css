@@ -784,12 +784,12 @@ CONTACT SECTION STYLES
         display: none !important;
     }
 
-    /* .mobile-contact-image {
+    .mobile-contact-image {
         display: block !important;
         object-fit: cover;
         min-height: 100%;
         max-width: 100%;
-    } */
+    }
 }
 
 @media screen and (min-width: 700px) {
