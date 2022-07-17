@@ -199,21 +199,21 @@
                             @csrf
                             <div class="flex control-group">
                                 <label class="text-highlight" for="name">Name</label>
-                                <input id="name" name="name" type="text">
+                                <input id="name" name="name" type="text" required>
                                 @error('name')
                                 <p class="error">{{$message}}</p>
                                 @enderror
                             </div>
                             <div class="flex control-group">
                                 <label class="text-highlight" for="email">Email</label>
-                                <input id="email" name="email" type="text">
+                                <input id="email" name="email" type="text" required>
                                 @error('email')
                                 <p class="error">{{$message}}</p>
                                 @enderror
                             </div>
                             <div class="flex control-group">
                                 <label class="text-highlight" for="message">Message</label>
-                                <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                                <textarea id="message" name="message" cols="30" rows="10" required></textarea>
                                 @error('message')
                                 <p class="error">{{$message}}</p>
                                 @enderror

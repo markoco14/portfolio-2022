@@ -35,8 +35,13 @@ class ContactController extends Controller
         ];
     
         Mail::to('mark.oconnor14@gmail.com')->send(new \App\Mail\PortfolioContactForm($details));
-    
-        return redirect(url()->previous() . '#contact')->with('success', 
+        
+        // return redirect(url()->previous() . '#contact')->with('success', 
+        //     'Hi ' . $request->name . ', your message was sent. 
+        //     Thank you for contacting me, I will reply as soon as possible.'
+        // );
+
+        return back()->with('success', 
             'Hi ' . $request->name . ', your message was sent. 
             Thank you for contacting me, I will reply as soon as possible.'
         );
