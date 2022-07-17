@@ -3,7 +3,7 @@
         <span>Contact</span>
     </h2>  
     <div class="grid contact-grid">
-            <p>
+            <p style="padding: 1rem; background-color: white;">
             {{-- <p class="contact-grid-two contact-phrase"> --}}
                 How I can help you reach your goals?
             </p>
@@ -11,6 +11,7 @@
             <form 
                 action="contact-me" 
                 method="POST"
+                style="padding: 1rem; background-color: white;"
                 {{-- class="contact-grid-one contact-form" --}}
             >    
                 @csrf

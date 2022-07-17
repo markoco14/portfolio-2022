@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+form {
+    box-sizing: border-box;
+}
+
 /* Remove default margin */
 * {
   margin: 0;
