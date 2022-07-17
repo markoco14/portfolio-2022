@@ -735,7 +735,7 @@ CONTACT SECTION STYLES
 
 .contact-form {
     margin: 0;
-    min-width: 100%;
+    /* width: 100%; */
     background-color: white;
     padding: 1rem;
     border-radius: 0 0 10px 10px;
