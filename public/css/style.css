@@ -762,7 +762,13 @@ CONTACT SECTION STYLES
 
 .contact-image {
     object-fit: cover;
-    min-height:100%;
+    min-height: 100%;
+    width: 100%;
+}
+
+.mobile-contact-image {
+    display: none !important;
+    
 }
 
 @media screen and (max-width: 499px) {
@@ -773,6 +779,17 @@ CONTACT SECTION STYLES
     .contact-form {
         border-radius: 0;
     }
+
+    .contact-image {
+        display: none !important;
+    }
+
+    /* .mobile-contact-image {
+        display: block !important;
+        object-fit: cover;
+        min-height: 100%;
+        max-width: 100%;
+    } */
 }
 
 @media screen and (min-width: 700px) {

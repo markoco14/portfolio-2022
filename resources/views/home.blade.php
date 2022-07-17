@@ -232,9 +232,14 @@
                 </div>
             </article>
             <img 
-                src="{{URL::asset("/images/contact_image.png")}}" 
+                src="{{URL::asset("/images/desktop_contact_image.jpg")}}" 
                 alt="A pair of outstretched hands hover over the keys; wondering what to write next."
                 class="contact-image"
+            >
+            <img 
+                src="{{URL::asset("/images/mobile_contact_image.jpg")}}" 
+                alt="A pair of outstretched hands hover over the keys; wondering what to write next."
+                class="mobile-contact-image"
             >
             </div>
         </section>
