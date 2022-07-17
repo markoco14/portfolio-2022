@@ -744,8 +744,9 @@ CONTACT SECTION STYLES
 
 .contact-phrase {
     background-color: white;
-    padding:1rem;
-    font-weight:600;
+    padding: 1rem; 
+    font-size: 1.2rem;
+    font-weight: 600;
     border-radius: 10px 10px 0 0;
 }
 
@@ -844,6 +845,9 @@ CONTACT SECTION STYLES
     .contact-phrase {
         flex-grow:0;
         border-radius: 10px 10px 10px 10px;
+        display: flex;
+        align-self: center;
+        margin-bottom:5rem;
     }
     
     .contact-form {
