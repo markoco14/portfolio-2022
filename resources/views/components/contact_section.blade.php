@@ -8,7 +8,7 @@
                 How I can help you reach your goals?
             </p>
         </div> --}}
-        <div class="contact-one">
+        {{-- <div class="contact-one">
             <form 
                 action="contact-me" 
                 method="POST"
@@ -45,7 +45,7 @@
                     </button>
                 </div>
             </form>
-        </div>
+        </div> --}}
     </div>
 </article>
 <img 
