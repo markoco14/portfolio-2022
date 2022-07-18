@@ -117,24 +117,30 @@
         <section id="home" class="grid grid-stack hero-grid">
             <div class="container flex flex-column">
                 <article class="hero-content">
-                    <h1 class="hero-phrase">
-                        I build things
-                        people love using
-                    </h1>
-                    <p class="hero-name">Mark O'Connor</p>
-                    <p class="hero-job-title">Full-Stack Developer</p>
-                    <p class="hero-city">Taipei, Taiwan</p>
-                    <div class="action-button-container">
-                        <a 
-                            href="#about" 
-                            class="button button-orange"
-                        >
-                            About Me</a>
-                        <a 
-                            href="#projects" 
-                            class="button button-blue"
-                        >
-                            My Projects</a>
+                    <div style="margin-bottom: 1rem;">
+                        <h1 class="hero-tagline">
+                            I build products people love using
+                        </h1>
+                        <h2 class="hero-phrase"> 
+                            Engaging user experience, fast performance and scalability. Elegant solutions to modern business problems.
+                        </h2>
+                    </div>
+                    <div>
+                        <p class="hero-name">Mark O'Connor</p>
+                        <p class="hero-job-title">Full-Stack Developer</p>
+                        <p class="hero-city">Taipei, Taiwan</p>
+                        <div class="action-button-container">
+                            <a 
+                                href="#about" 
+                                class="button button-orange"
+                            >
+                                About Me</a>
+                            <a 
+                                href="#projects" 
+                                class="button button-blue"
+                            >
+                                My Projects</a>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -167,7 +173,7 @@
                     </div>
                 </div>
                 <article class="flex about-description-container">
-                    <x-aboutstats></x-aboutstats>
+                    <x-about_short_bio></x-about_short_bio>
                     <div class="flex action-button-container about-action-large ">
                         <a href="#contact" class="button button-orange">Contact Me</a>
                         {{-- <a href="#about" class="button button-blue">Learn More</a> --}}
