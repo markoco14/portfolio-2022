@@ -430,7 +430,6 @@ svg {
     }
 }
 
-
 .hero-phrase {
     display: inline;
     padding:0;
@@ -465,7 +464,6 @@ svg {
     border-radius:2px;
     font-size: 1rem;    
 }
-
 
 .button-orange {
     background: var(--clr-orange);
@@ -527,12 +525,6 @@ svg {
     }
 }
 
-/* @media screen and (min-width: 850px) {
-    .hero-content {
-        width: min(500px, 90%)
-    }
-} */
-
 @media screen and (min-width: 1000px) {
 
     .hero-image {
@@ -545,7 +537,6 @@ svg {
 
 @media screen and (min-width: 1400px) {
     .hero-content {
-        /* margin: auto; */
         padding: 0;
     }
 }
@@ -737,15 +728,6 @@ CONTACT SECTION STYLES
     margin: 5rem auto;
 }
 
-/* .contact-phrase {
-    flex-grow: 1;
-    background-color: white;
-    font-size:1.2rem;
-    font-weight:600;
-    padding: 1rem;
-    border-radius: 10px 10px 0 0;
-} */
-
 .contact-phrase {
     background-color: white;
     padding: 1rem; 
@@ -753,13 +735,6 @@ CONTACT SECTION STYLES
     font-weight: 600;
     border-radius: 10px 10px 0 0;
 }
-
-/* .contact-form {
-    margin: 0;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0 0 10px 10px;
-} */
 
 .contact-form {
     background: white;
@@ -793,10 +768,6 @@ CONTACT SECTION STYLES
     width: 100%;
 }
 
-/* .mobile-contact-image {
-    display: none !important;
-} */
-
 @media screen and (max-width: 499px) {
     .contact-phrase {
         border-radius: 0;
@@ -810,13 +781,6 @@ CONTACT SECTION STYLES
     .contact-image {
         display: none !important;
     }
-
-    /* .mobile-contact-image {
-        display: block !important;
-        object-fit: cover;
-        min-height: 100%;
-        max-width: 100%;
-    } */
 }
 
 @media screen and (min-width: 700px) {
@@ -841,11 +805,6 @@ CONTACT SECTION STYLES
         grid-row: 1;
     }
 
-    /* .contact-phrase-container {
-        margin-top:30%;
-        align-self: flex-start;
-    } */
-
     .contact-phrase {
         flex-grow:0;
         border-radius: 10px 10px 10px 10px;
@@ -856,6 +815,13 @@ CONTACT SECTION STYLES
     
     .contact-form {
         border-radius: 10px 10px 10px 10px;
+    }
+}
+
+/* because contact section image too large on big screens */
+@media screen and (min-width: 1000px) {
+    .contact-image {
+        max-height: 80vh;
     }
 }
 
