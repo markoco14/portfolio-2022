@@ -122,7 +122,7 @@
                             I build products people love using
                         </h1>
                         <h2 class="hero-phrase"> 
-                            Engaging user experience, fast performance and scalability. Elegant solutions to modern business problems.
+                            Engaging user experiences, fast performance and scalability. Elegant solutions to modern business problems.
                         </h2>
                     </div>
                     <div>
