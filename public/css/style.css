@@ -164,6 +164,23 @@ svg {
     border-radius:5%;
 }
 
+.button {
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius:2px;
+    font-size: 1rem;    
+}
+
+.button-orange {
+    background: var(--clr-orange);
+}
+
+.button-blue {
+    background: var(--clr-blue);
+}
+
 /* SECTION & SECTION HEADING STYLES */
 
 .section {
@@ -410,6 +427,13 @@ svg {
     z-index: -1;
 }
 
+@media screen and (min-width: 500px) {
+    .hero-content {
+        padding: 0;
+    }
+}
+
+
 @media screen and (min-width: 700px) {
 
     .hero-grid {
@@ -424,26 +448,25 @@ svg {
     padding:1rem;
 }
 
-@media screen and (min-width: 500px) {
-    .hero-content {
-        padding: 0;
-    }
-}
-
-.hero-phrase {
-    display: inline;
+.hero-tagline {
+    /* display: inline; */
     padding:0;
     text-align: left;
     font-size: clamp(2rem, 5vw, 5rem);
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.hero-phrase {
+    line-height: 1.5rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem);
 }
 
 .hero-name {
     font-size: clamp(1.5rem, 3vw, 3rem);
     color: var(--clr-blue);
     font-weight: 600;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0;
 }
 
 .hero-job-title {
@@ -454,23 +477,6 @@ svg {
 .hero-city {
     font-size: clamp(0.875rem, 1.5vw, 1.5rem);
     margin-bottom:1rem;
-}
-
-.button {
-    border: none;
-    color: white;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    border-radius:2px;
-    font-size: 1rem;    
-}
-
-.button-orange {
-    background: var(--clr-orange);
-}
-
-.button-blue {
-    background: var(--clr-blue);
 }
 
 .hero-image {
@@ -512,8 +518,9 @@ svg {
         margin: 0;
     }
 
-    .hero-phrase {
+    .hero-tagline {
         text-align:left;
+        margin-bottom: 1rem;
     }
 
     .hero-image {
@@ -526,12 +533,12 @@ svg {
 }
 
 @media screen and (min-width: 1000px) {
-
     .hero-image {
         max-height: 100vh;
     }
+    
     .hero-content {
-        width: min(700px, 90%);
+        width: min(800px, 90%);
     }
 }
 
