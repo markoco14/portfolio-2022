@@ -93,7 +93,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.cakeresume.com/mark-o-connor">
+                    <a 
+                        href="https://www.cakeresume.com/mark-o-connor"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <i class="fas fa-file-alt"></i>
                         <span>Resume</span>
                     </a>
