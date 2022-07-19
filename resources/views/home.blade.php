@@ -123,11 +123,15 @@
                 <article class="hero-content">
                     <div style="margin-bottom: 1rem;">
                         <h1 class="hero-tagline">
+                            I build fast, scalable 
+                            solutions for your business needs
+                        </h1>
+                        {{-- <h1 class="hero-tagline">
                             I build products people love using
                         </h1>
                         <h2 class="hero-phrase"> 
-                            Engaging user experiences, fast performance and scalability. Elegant solutions to modern business problems.
-                        </h2>
+                            Engaging user experiences, fast performance, and scalability &#8212; Elegant solutions for your business needs.
+                        </h2> --}}
                     </div>
                     <div>
                         <p class="hero-name">Mark O'Connor</p>
