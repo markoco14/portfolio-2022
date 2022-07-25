@@ -80,10 +80,10 @@
     $(document).ready(function(){
             $('.carousel-container').slick({
                 dots: true,
-                arrows: false,
+                arrows: true,
                 responsive: [
                     {
-                        breakpoint: 700,
+                        breakpoint: 500,
                         settings: {
                             arrows: false,
                         }
