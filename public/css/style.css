@@ -562,7 +562,7 @@ svg {
 .slick-next {
     /* to fix arrows alignment */
     margin-top: -0.3rem; 
-    margin-right: 3.5rem;
+    margin-right: 3.8rem;
 }
 
 .slick-prev::before,
