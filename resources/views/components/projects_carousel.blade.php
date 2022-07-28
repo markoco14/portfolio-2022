@@ -4,6 +4,49 @@
         <article>
             <div class="grid grid-stack-bottom">
                 <div class="flex project-title-links-container">
+                    <h3 class="project-content-heading">WIP: NextJS/Mirage E-Commerce</h3>
+                    <div class="flex project-image-buttons-container">
+                        <a 
+                            href="https://github.com/markoco14/nextjs-admin"
+                            target="_blank"
+                            rel="noopenner noreferrer" 
+                            class="button button-orange"
+                        >
+                            Review Code
+                        </a>
+                        <a 
+                            href="https://nextjs-admin-a1xxfn174-markoco14.vercel.app/"
+                            target="_blank"
+                            rel="noopenner noreferrer" 
+                            class="button button-blue"
+                        >
+                            Visit Site
+                        </a>
+                        {{-- <a 
+                            href="https://mymoneybags.herokuapp.com"
+                            target="_blank"
+                            rel="noopenner noreferrer" 
+                            class="button button-blue"
+                        >
+                            ReadME
+                        </a> --}}
+                    </div>
+                </div>
+                <img 
+                    src="{{URL::asset('images/desktop_productly_project_pic.jpg')}}" 
+                    alt="A person records their spending while shopping on Black Friday."
+                    class="project-image"
+                >
+                <img 
+                    src="{{URL::asset('images/mobile_productly_project_pic.jpg')}}" 
+                    alt="A person records their spending while shopping on Black Friday."
+                    class="mobile-project-image"
+                >
+            </div>
+        </article>
+        <article>
+            <div class="grid grid-stack-bottom">
+                <div class="flex project-title-links-container">
                     <h3 class="project-content-heading">Expensave</h3>
                     <div class="flex project-image-buttons-container">
                         <a 
